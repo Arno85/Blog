@@ -1,12 +1,12 @@
-import Search from './../ui/Search';
-
-const Header: React.FC = () => {
+const Header: React.FC<{
+	onToggleDarkMode: () => void;
+}> = (props) => {
 	return (
-		<header className="fixed h-16 flex items-center">
+		<header className="fixed h-16 flex items-center justify-center w-full">
 			<div className="logo">
-				<h1>Arnaud Martin</h1>
+				<h1 className="text-purple dark:text-pink">Arnaud Martin</h1>
 			</div>
-			<Search />
+			<button onClick={props.onToggleDarkMode}>Dark mode</button>
 		</header>
 	);
 };

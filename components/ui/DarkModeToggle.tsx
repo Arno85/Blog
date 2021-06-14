@@ -13,12 +13,12 @@ const DarkModeToggle: React.FC<{
 			>
 				<div
 					className={
-						'absolute z-10 rounded-full w-6 h-6 bg-white dark:bg-gray-800 cursor-pointer border-2 border-gray-800 dark:border-white transition-all duration-300 ' +
+						'absolute z-10 rounded-full w-6 h-6 bg-white dark:bg-gray-800 cursor-pointer border-4 border-gray-800 dark:border-white transition-all duration-300 ' +
 						(props.darkMode ? 'transform translate-x-0' : 'transform translate-x-6')
 					}
 				/>
-				<MoonIcon className="absolute z-0 left-0 w-6 h-6 p-0.5 text-white" />
-				<SunIcon className="absolute right-0 w-6 h-6 p-0.5 text-gray-800" />
+				<MoonIcon className="absolute z-0 left-0 w-6 h-6 p-1 text-white" />
+				<SunIcon className="absolute right-0 w-6 h-6 p-1 text-gray-800" />
 			</div>
 		</div>
 	);

@@ -34,10 +34,10 @@ const Layout: React.FC = (props) => {
 
 	return (
 		<div className={'w-full h-screen' + (darkMode ? ' dark' : '')}>
-			<div className={`bg-gray-800 absolute -z-1 top-0 right-0 ${bgClasses}`} />
+			<div className={`bg-darkPurple absolute -z-1 top-0 right-0 ${bgClasses}`} />
 			<div className={`w-full h-full text-gray-800 dark:text-white ${textClasses}`}>
 				<Header darkMode={darkMode} onToggleDarkMode={toggleDarkModeHandler} />
-				<main className="flex pt-16">
+				<main className="flex pt-32">
 					<section className="w-3/4">{props.children}</section>
 					<Aside />
 				</main>

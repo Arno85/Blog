@@ -10,8 +10,8 @@ module.exports = {
       white: colors.white,
       purple: '#1f1137',
       pink: '#5271ff',
-      orangePastel: '#ffdad1',
-      orange: '#F98404'
+      orangePastel: '#ffefe3',
+      orange: '#F98404',
     },
     extend: {
       zIndex: {
@@ -46,7 +46,7 @@ module.exports = {
             textShadow: '0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #5271ff, 0 0 80px #5271ff, 0 0 90px #5271ff, 0 0 100px #5271ff, 0 0 150px #5271ff'
           },
           '20%, 24%, 55%': { textShadow: 'none' }
-        }
+        },
       },
       animation: {
         darkBgIn: 'darkBgIn 0.2s ease-out forwards',
@@ -56,6 +56,13 @@ module.exports = {
         pulsate: 'pulsate 0.11s ease-in-out infinite alternate',
         flicker: 'flicker 2s infinite alternate',
       },
+      fontFamily: {
+        'title': ['Quantico', 'sans-serif'],
+        'text': ['Martel Sans', 'sans-serif']
+      }
+    },
+    container: {
+      center: true,
     },
   },
   variants: {

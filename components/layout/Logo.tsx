@@ -5,7 +5,7 @@ const Logo: React.FC<{
 	darkMode: boolean;
 }> = (props) => {
 	let backgroundContent = (
-		<div className={classes.sun}>
+		<div className={classes.sunContainer}>
 			<div />
 			<div />
 			<div />
@@ -28,7 +28,7 @@ const Logo: React.FC<{
 		<Fragment>
 			{backgroundContent}
 			<h1 className={classes.logoText + (props.darkMode ? ` animate-pulsate ${classes.neonText}` : '')}>
-				<span className={props.darkMode ? 'animate-flicker' : ''}>Arnaud</span> Martin
+				<span className={props.darkMode ? 'animate-flicker' : classes.distortionText}>Arnaud</span> Martin
 			</h1>
 		</Fragment>
 	);

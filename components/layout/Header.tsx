@@ -6,12 +6,14 @@ const Header: React.FC<{
 	darkMode: boolean;
 }> = (props) => {
 	return (
-		<header className="fixed h-32 flex items-center justify-center w-full bg-orangePastel dark:bg-purple">
-			<div className="flex-1 text-center relative h-full">
-				<Logo darkMode={props.darkMode} />
-			</div>
-			<div className="mr-8">
-				<DarkModeToggle darkMode={props.darkMode} onToggleDarkMode={props.onToggleDarkMode} />
+		<header className="h-32 w-full bg-orangePastel dark:bg-purple">
+			<div className="container flex items-center justify-center">
+				<div className="flex-1 relative h-full">
+					<Logo darkMode={props.darkMode} />
+				</div>
+				<div>
+					<DarkModeToggle darkMode={props.darkMode} onToggleDarkMode={props.onToggleDarkMode} />
+				</div>
 			</div>
 		</header>
 	);

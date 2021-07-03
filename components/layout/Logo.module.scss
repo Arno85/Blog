@@ -5,16 +5,55 @@
     font-size: 5rem;
     font-weight: 500;
     color: #ff1c51;
+    position: relative;
+    z-index: 2;
 }
 
-.sun {
-    width: 12rem;
-    height: 6rem;
+.distortionText:before {
+    position: absolute;
+    content: "Arnaud";
+    z-index: -1;
+    left: -2px;
+    color: #ffb6c7;
+    animation: heatDistortion 0.3s ease-in-out infinite;
+}
+
+@keyframes heatDistortion {
+    0% {
+        left: -1px;
+    }
+    12.5% {
+        left: 0;
+    }
+    25% {
+        left: 1px;
+    }
+    37.5% {
+        left: 1px;
+    }
+    50% {
+        left: 1px;
+    }
+    62.5% {
+        left: 0;
+    }
+    75% {
+        left: 0;
+    }
+    87.5% {
+        left: -1px;
+    }
+    100% {
+        left: -1px;
+    }
+}
+
+.sunContainer {
+    width: 10rem;
+    height: 5rem;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    transform: translateY(-50%);
     opacity: 0.6;
     background: linear-gradient(#ffda05, #f90404);
     border-top-left-radius: 8rem;
@@ -23,29 +62,29 @@
 
     div {
         position: absolute;
-        width: 16rem;
+        width: 10rem;
         z-index: -1;
-        background: #ffdad1;
+        background: #ffefe3;
     }
 
     div:first-child {
-        height: 0.3rem;
+        height: 0.2rem;
         top: 1.6rem;
     }
 
     div:nth-child(2) {
-        height: 0.4rem;
-        top: 2.8rem;
+        height: 0.3rem;
+        top: 2.4rem;
     }
 
     div:nth-child(3) {
-        height: 0.5rem;
-        top: 4rem;
+        height: 0.4rem;
+        top: 3.2rem;
     }
 
     div:last-child {
-        height: 0.6rem;
-        top: 5rem;
+        height: 0.5rem;
+        top: 4rem;
     }
 }
 
@@ -53,38 +92,36 @@
     width: 0;
     height: 0;
     position: absolute;
-    left: 50%;
-    z-index: -1;
     opacity: 1;
     border-style: solid;
 }
 
 .outerWhiteTriangle {
-    top: calc(50% + 5px);
-    border-width: 6.8rem 3.8rem 0 3.8rem;
+    top: calc(50% + 10px);
+    border-width: 92px 50px 0 50px;
     border-color: #fff transparent transparent transparent;
-    transform: translate(-50%, -50%) rotate(-10deg);
+    transform: translateY(-50%) rotate(-10deg);
 }
 
 .innerWhiteTriangle {
-    top: calc(50% + 4px);
-    border-width: 6.2rem 3.4rem 0 3.4rem;
+    top: calc(50% + 8px);
+    border-width: 82px 43px 0 43px;
     border-color: #1f1137 transparent transparent transparent;
-    transform: translate(-50%, -50%) rotate(-10deg);
+    transform: translate(7px, -50%) rotate(-10deg);
 }
 
 .outerPinkTriangle {
-    top: calc(50% + 1px);
-    border-width: 5.8rem 2.8rem 0 2.8rem;
+    top: calc(50% + 8px);
+    border-width: 82px 43px 0 43px;
     border-color: #f09 transparent transparent transparent;
-    transform: translate(-50%, -50%) rotate(-16deg);
+    transform: translate(10px, -50%) rotate(-20deg);
 }
 
 .innerPinkTriangle {
-    top: 50%;
-    border-width: 5.2rem 2.4rem 0 2.4rem;
+    top: calc(50% + 6px);
+    border-width: 70px 35px 0 35px;
     border-color: #1f1137 transparent transparent transparent;
-    transform: translate(-50%, -50%) rotate(-16deg);
+    transform: translate(17px, -50%) rotate(-20deg);
 }
 
 .neonText {

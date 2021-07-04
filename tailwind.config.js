@@ -59,7 +59,28 @@ module.exports = {
       fontFamily: {
         'title': ['Audiowide', 'sans-serif'],
         'text': ['IBM Plex Mono', 'sans-serif']
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h2: {
+              fontFamily: 'Audiowide, sans-serif',
+              fontSize: '2rem',
+              fontWeight: '400',
+            },
+            h3: {
+              fontFamily: 'Audiowide, sans-serif',
+              fontSize: '1.6rem',
+              fontWeight: '400',
+            },
+            p: {
+              fontFamily: 'IBM Plex Mono, sans-serif',
+              fontSize: '1rem',
+              fontWeight: '400',
+            }
+          },
+        },
+      })
     },
     container: {
       center: true,
@@ -68,5 +89,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

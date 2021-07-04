@@ -13,6 +13,12 @@ const Logo: React.FC<{
 		</div>
 	);
 
+	let logoContent = (
+		<h1 className={classes.logoText}>
+			<span className={classes.distortionText}>Console.blog</span>
+		</h1>
+	);
+
 	if (props.darkMode) {
 		backgroundContent = (
 			<div className={classes.triangleContainer}>
@@ -22,14 +28,21 @@ const Logo: React.FC<{
 				<div className={`${classes.triangle} ${classes.innerPinkTriangle}`} />
 			</div>
 		);
+
+		logoContent = (
+			<h1 className={classes.logoText + ` animate-pulsate ${classes.neonText}`}>
+				Console.<span className={'animate-flicker'}>blog</span>
+			</h1>
+		);
 	}
 
 	return (
 		<Fragment>
 			{backgroundContent}
-			<h1 className={classes.logoText + (props.darkMode ? ` animate-pulsate ${classes.neonText}` : '')}>
-				<span className={props.darkMode ? 'animate-flicker' : classes.distortionText}>Arnaud</span> Martin
-			</h1>
+			{/* <h1 className={classes.logoText + (props.darkMode ? ` animate-pulsate ${classes.neonText}` : '')}>
+				<span className={props.darkMode ? 'animate-flicker' : classes.distortionText}>Console.Blog</span>
+			</h1> */}
+			{logoContent}
 		</Fragment>
 	);
 };

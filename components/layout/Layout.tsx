@@ -38,7 +38,7 @@ const Layout: React.FC = (props) => {
 			<div className={`flex flex-col w-full h-full min-h-screen text-gray-800 dark:text-white ${textClasses}`}>
 				<Header darkMode={darkMode} onToggleDarkMode={toggleDarkModeHandler} />
 				<main className="container flex flex-1 my-32">
-					<section>{props.children}</section>
+					<section className="w-4/5">{props.children}</section>
 					<Aside />
 				</main>
 				<Footer />

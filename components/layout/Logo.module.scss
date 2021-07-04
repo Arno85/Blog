@@ -11,9 +11,9 @@
 
 .distortionText:before {
     position: absolute;
-    content: "Arnaud";
+    content: "Console.blog";
     z-index: -1;
-    left: -2px;
+    left: -1px;
     color: #ffb6c7;
     animation: heatDistortion 0.3s ease-in-out infinite;
 }
@@ -54,7 +54,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 0.6;
+    opacity: 0.7;
     background: linear-gradient(#ffda05, #f90404);
     border-top-left-radius: 8rem;
     border-top-right-radius: 8rem;

@@ -23,7 +23,7 @@ const DUMMY_ARTICLES: Article[] = [
 		date: new Date().toISOString(),
 		image: 'https://i.ytimg.com/vi/XccPsuqAz4E/maxresdefault.jpg',
 		content:
-			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit doloremque molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
+			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
 		excerpt: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae...'
 	},
 	{
@@ -42,7 +42,7 @@ const DUMMY_ARTICLES: Article[] = [
 		date: new Date().toISOString(),
 		image: 'https://i.ytimg.com/vi/PWMTDRWJqu4/maxresdefault.jpg',
 		content:
-			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit doloremque molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
+			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
 		excerpt: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae...'
 	},
 	{
@@ -61,7 +61,7 @@ const DUMMY_ARTICLES: Article[] = [
 		date: new Date().toISOString(),
 		image: 'https://i.ytimg.com/vi/sMLVzlRwvrM/maxresdefault.jpg',
 		content:
-			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit doloremque molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
+			'<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!</p><h2>Test titre H2</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!</p><h3>Test titre H3</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit dolor molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!</p>',
 		excerpt: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae...'
 	}
 ];

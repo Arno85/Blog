@@ -2,30 +2,21 @@ import { Article } from '../../models/article';
 import moment from 'moment';
 import Tag from '../ui/Tag';
 import Link from 'next/link';
+import useTimeToRead from './../../hooks/use-timeToRead';
 
 const ArticleItem: React.FC<{ article: Article }> = (props) => {
-	const calculateTimeToRead = () => {
-		const wordsPerMinute = 200;
-
-		let textLength = props.article.content.split(' ').length;
-		if (textLength > 0) {
-			let value = Math.ceil(textLength / wordsPerMinute);
-			return `${value} min read`;
-		}
-
-		return '';
-	};
+	const { timetoRead } = useTimeToRead(props.article.content);
 
 	return (
-		<article className="w-1/3 pr-24 pb-24 transform hover:scale-105 transition duration-500 ease-in-out">
+		<article className="w-1/3 pr-24 pb-24">
 			<Link href={`/${props.article.slug}`}>
-				<a>
+				<a className="block transform hover:scale-105 transition duration-400 linear">
 					<img src={props.article.image} alt={props.article.title} className="w-full" />
 					<h1 className="text-2xl font-title pt-6">{props.article.title}</h1>
 					<p className="font-text text-sm pt-3">
 						<span>{props.article.author} • </span>
 						<span>{moment(props.article.date).format('DD MMM YYYY')} • </span>
-						<span>{calculateTimeToRead()}</span>
+						<span>{timetoRead}</span>
 					</p>
 					<div className="pt-3">
 						{props.article.categories.map((cat) => (

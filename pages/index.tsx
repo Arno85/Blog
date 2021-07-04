@@ -1,7 +1,9 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React, { Fragment } from 'react';
 import ArticlesList from '../components/articles/ArticlesList';
 import { Article } from './../models/article';
+import DUMMY_ARTICLES from './api/dummy_articles';
 
 const Home: React.FC<{ articles: Article[] }> = (props) => {
 	return (
@@ -18,66 +20,12 @@ const Home: React.FC<{ articles: Article[] }> = (props) => {
 
 export default Home;
 
-export async function getStaticProps() {
-	const articles: Article[] = [
-		{
-			id: 1,
-			title: 'How to Setup Typescript in React',
-			author: 'Arnaud Martin',
-			categories: [
-				{
-					id: 1,
-					title: 'React'
-				},
-				{
-					id: 2,
-					title: 'Typescript'
-				}
-			],
-			date: new Date().toISOString(),
-			image: 'https://i.ytimg.com/vi/Z5iWr6Srsj8/maxresdefault.jpg',
-			content:
-				'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit doloremque molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
-			excerpt: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae...'
-		},
-		{
-			id: 2,
-			title: 'Vue.js cheat sheet',
-			author: 'Arnaud Martin',
-			categories: [
-				{
-					id: 3,
-					title: 'Vue.js'
-				}
-			],
-			date: new Date().toISOString(),
-			image:
-				'https://res.cloudinary.com/practicaldev/image/fetch/s--VtIgiqJe--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/d440mmj72v2vi7ad76ir.png',
-			content:
-				'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit doloremque molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
-			excerpt: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae...'
-		},
-		{
-			id: 3,
-			title: 'Get Started with Tailwind.css',
-			author: 'Arnaud Martin',
-			categories: [
-				{
-					id: 4,
-					title: 'CSS'
-				}
-			],
-			date: new Date().toISOString(),
-			image: 'https://miro.medium.com/max/1400/0*A70w-WrmSaBVxwAm.png',
-			content:
-				'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae qui, architecto perspiciatis rerum odit doloremque molestias nulla necessitatibus inventore nisi fuga distinctio bcaecati quos consequatur dolor, facilis aperiam!',
-			excerpt: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, sint repudiandae...'
-		}
-	];
+export const getStaticProps: GetStaticProps = async () => {
+	const articles: Article[] = DUMMY_ARTICLES;
 
 	return {
 		props: {
-			articles: articles.flatMap((i) => [ i, i, i ])
+			articles: articles.flatMap((i) => [ i, i, i ]).sort((a, b) => 0.5 - Math.random())
 		}
 	};
-}
+};

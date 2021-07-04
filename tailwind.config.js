@@ -57,8 +57,8 @@ module.exports = {
         flicker: 'flicker 2s infinite alternate',
       },
       fontFamily: {
-        'title': ['Quantico', 'sans-serif'],
-        'text': ['Martel Sans', 'sans-serif']
+        'title': ['Audiowide', 'sans-serif'],
+        'text': ['IBM Plex Mono', 'sans-serif']
       }
     },
     container: {

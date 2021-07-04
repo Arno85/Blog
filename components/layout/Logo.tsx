@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import classes from './Logo.module.scss';
+import Link from 'next/link';
 
 const Logo: React.FC<{
 	darkMode: boolean;
@@ -14,9 +15,11 @@ const Logo: React.FC<{
 	);
 
 	let logoContent = (
-		<h1 className={classes.logoText}>
-			<span className={classes.distortionText}>Console.blog</span>
-		</h1>
+		<Link href="/">
+			<a className={classes.logoText + ` inline-block`}>
+				<span className={classes.distortionText}>Console.blog</span>
+			</a>
+		</Link>
 	);
 
 	if (props.darkMode) {
@@ -30,9 +33,11 @@ const Logo: React.FC<{
 		);
 
 		logoContent = (
-			<h1 className={classes.logoText + ` animate-pulsate ${classes.neonText}`}>
-				Console.<span className={'animate-flicker'}>blog</span>
-			</h1>
+			<Link href="/">
+				<a className={classes.logoText + ` inline-block animate-pulsate ${classes.neonText}`}>
+					Console.<span className={'animate-flicker'}>blog</span>
+				</a>
+			</Link>
 		);
 	}
 

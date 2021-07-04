@@ -68,7 +68,10 @@ const ArticleDetail: React.FC<{ article: Article }> = (props) => {
 					<Tag key={cat.id} name={cat.title} bgColor={cat.bgColor} fgColor={cat.fgColor} />
 				))}
 			</div>
-			<div className="mt-12 prose max-w-none" dangerouslySetInnerHTML={{ __html: props.article.content }} />
+			<div
+				className="mt-12 prose dark:prose-dark max-w-none"
+				dangerouslySetInnerHTML={{ __html: props.article.content }}
+			/>
 			<SyntaxHighlighter showLineNumbers language="javascript" style={vscDarkPlus}>
 				{CODE}
 			</SyntaxHighlighter>

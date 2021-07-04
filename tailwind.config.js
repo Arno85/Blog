@@ -73,11 +73,30 @@ module.exports = {
               fontSize: '1.6rem',
               fontWeight: '400',
             },
+            h4: {
+              fontFamily: 'Audiowide, sans-serif',
+              fontSize: '1.4rem',
+              fontWeight: '400',
+            },
             p: {
               fontFamily: 'IBM Plex Mono, sans-serif',
               fontSize: '1rem',
               fontWeight: '400',
             }
+          },
+        },
+        dark: {
+          css: {
+            color: theme('colors.white'),
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
+              color: theme('colors.white'),
+            },
+            h4: {
+              color: theme('colors.white'),
+            },
           },
         },
       })
@@ -87,7 +106,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      typography: ['dark']
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),

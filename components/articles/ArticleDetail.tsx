@@ -3,6 +3,8 @@ import { useEffect, useRef } from 'react';
 import { Article } from './../../models/article';
 import Tag from './../ui/Tag';
 import useTimeToRead from './../../hooks/use-timeToRead';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const ArticleDetail: React.FC<{ article: Article }> = (props) => {
 	const plxContainer = useRef<HTMLDivElement>({} as HTMLDivElement);
@@ -48,6 +50,8 @@ const ArticleDetail: React.FC<{ article: Article }> = (props) => {
 		lastScrollTop = st;
 	};
 
+	const CODE = `const woah = fun => fun + 1;\nconst dude = woah(2) + 3;\n\nfunction thisIsAFunction() {\n\treturn [1,2,3].map(n => n + 1).filter(n !== 3);\n}\n\nconsole.log('making up fake code is really hard');\n\nfunction itIs() {\n\treturn 'no seriously really it is';\n}`;
+
 	return (
 		<article>
 			<div className="relative overflow-hidden w-full h-96" ref={plxContainer}>
@@ -65,6 +69,9 @@ const ArticleDetail: React.FC<{ article: Article }> = (props) => {
 				))}
 			</div>
 			<div className="mt-12 prose max-w-none" dangerouslySetInnerHTML={{ __html: props.article.content }} />
+			<SyntaxHighlighter showLineNumbers language="javascript" style={vscDarkPlus}>
+				{CODE}
+			</SyntaxHighlighter>
 		</article>
 	);
 };
